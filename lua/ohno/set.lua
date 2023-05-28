@@ -11,3 +11,10 @@ vim.opt.smartindent = true
 vim.opt.wrap = true 
 
 vim.opt.updatetime= 50
+
+vim.opt.hlsearch = false
+vim.opt.incsearch = true
+
+vim.opt.termguicolors = true
+
+vim.opt.colorcolumn = "120"

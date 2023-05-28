@@ -1,20 +1,25 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
+    -- Plugin manager
     use 'wbthomason/packer.nvim'
 
+    -- Fuzzy finder
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
 
+    -- Colorscheme
     use({ 'rose-pine/neovim', as = 'rose-pine' })
     vim.cmd('colorscheme rose-pine')
 
+    -- Parsing libraries for language support
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
     use('nvim-treesitter/playground')
     use('nvim-treesitter/nvim-treesitter-context')
 
+    -- LSP
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v2.x',
@@ -33,9 +38,12 @@ return require('packer').startup(function(use)
         },
     }
 
+    -- Multiple files open
     use("theprimeagen/harpoon")
 
+    -- Undo history
     use("mbbill/undotree")
 
+    -- Git support
     use("tpope/vim-fugitive")
 end)
