@@ -7,13 +7,11 @@ end)
 require('mason').setup({})
 require('mason-lspconfig').setup({
   ensure_installed = {
-    'tsserver',
     'clangd',
     'lua_ls',
     'rust_analyzer',
-    'jdtls',
-    'golangci_lint_ls',
-    'jedi_language_server'
+    'ts_ls',
+    'gopls',
   },
   handlers = {
     function(server_name)
